@@ -1,6 +1,14 @@
-n = int(input("Enter number of rows: "))
+total = 0
+count = 0
 
-for i in range(1, n + 1):
-    for j in range(1, i + 1):
-        print(i, end=" ")
-    print()
+while True:
+    expense = float(input("Enter expense (0 to stop): "))
+
+    if expense == 0:
+        break
+
+    total = total + expense
+    count = count + 1
+
+print("Total Expense =", total)
+print("Number of Expenses =", count)
