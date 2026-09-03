@@ -1,18 +1,24 @@
-name = input("Enter student name: ")
+name1 = input("Enter item 1 name: ")
+qty1 = int(input("Enter quantity: "))
+price1 = float(input("Enter price: "))
 
-mark1 = float(input("Enter marks for Subject 1: "))
-mark2 = float(input("Enter marks for Subject 2: "))
-mark3 = float(input("Enter marks for Subject 3: "))
+name2 = input("Enter item 2 name: ")
+qty2 = int(input("Enter quantity: "))
+price2 = float(input("Enter price: "))
 
-total = mark1 + mark2 + mark3
+name3 = input("Enter item 3 name: ")
+qty3 = int(input("Enter quantity: "))
+price3 = float(input("Enter price: "))
 
-average = total / 3
+amount1 = qty1 * price1
+amount2 = qty2 * price2
+amount3 = qty3 * price3
 
-print("\n===== STUDENT SCORECARD =====")
-print("Name       :", name)
-print("Subject 1  :", mark1)
-print("Subject 2  :", mark2)
-print("Subject 3  :", mark3)
-print("Total Marks:", total)
-print("Average    :", round(average, 2))
-print("=============================")
+total = amount1 + amount2 + amount3
+
+print("\n----- GROCERY BILL -----")
+print(name1, qty1, price1, amount1)
+print(name2, qty2, price2, amount2)
+print(name3, qty3, price3, amount3)
+print("------------------------")
+print("Total Bill =", total)
