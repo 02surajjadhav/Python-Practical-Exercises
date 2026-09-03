@@ -1,11 +1,10 @@
-name = input("Enter employee name: ")
-role = input("Enter employee role: ")
-salary = float(input("Enter monthly salary: "))
+amount = float(input("Enter purchase amount: "))
+discount = float(input("Enter discount percentage: "))
 
-print("\n==============================")
-print("       EMPLOYEE ID CARD")
-print("==============================")
-print("Name   :", name)
-print("Role   :", role)
-print("Salary :", salary)
-print("==============================")
+discount_amount = amount * discount / 100
+final_amount = amount - discount_amount
+
+print("\n----- BILL SUMMARY -----")
+print("Purchase Amount =", amount)
+print("Discount Amount =", discount_amount)
+print("Final Amount =", final_amount)
