@@ -1,25 +1,24 @@
 flashcards = {
-    "Abundant": "Available in large quantities",
-    "Benevolent": "Kind and generous",
-    "Candid": "Honest and straightforward",
+    "Abundant": "Existing in large quantities",
+    "Brave": "Ready to face danger",
+    "Curious": "Eager to know or learn",
     "Diligent": "Hardworking and careful",
-    "Eloquent": "Fluent and persuasive in speaking"
+    "Enormous": "Very large"
 }
-correct_answers = 0
-total_questions = len(flashcards)
-print("=== Vocabulary Flashcard Quiz ===")
-for word, definition in flashcards.items():
-    print("\nWord:", word)
-    user_answer = input("Enter the definition: ")
-    if user_answer.strip().lower() == definition.lower():
-        print("Correct!")
-        correct_answers += 1
-    else:
-        print("Incorrect.")
-        print("Correct definition:", definition)
-accuracy = (correct_answers / total_questions) * 100
-print("\n=== Final Results ===")
-print("Total questions:", total_questions)
-print("Correct answers:", correct_answers)
-print("Incorrect answers:", total_questions - correct_answers)
-print(f"Accuracy score: {accuracy:.2f}%")
+def run_flashcards():
+    score = 0
+    total = len(flashcards)
+    for word, definition in flashcards.items():
+        print("\nWord:", word)
+        user_answer = input("Enter the definition: ").strip()
+        if user_answer.lower() == definition.lower():
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect!")
+            print("Correct definition:", definition)
+    accuracy = (score / total) * 100
+    print("\n--- FINAL RESULT ---")
+    print("Correct answers:", score, "/", total)
+    print(f"Accuracy: {accuracy:.1f}%")
+run_flashcards()
